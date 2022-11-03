@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+
+.container {display: flex;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;}
+
+.block {display: flex;
+        width: 30%;
+        text-align: center;
+        box-shadow: 10px 10px 5px rgb(121, 46, 46);
+        border-radius: 10%;
+        padding: 10px;
+        margin: 10px;
+        margin-bottom: 40px;
+        border: 2px solid white;
+        background-color: rgb(217, 177, 178);
+        display: inline-block;
+        padding-bottom:50px;}
+
+    @media screen and (max-width: 450px) {
+.block {width: 100%;}}
+
+ul {text-align: justify;}
+
+.img    {position: relative;
+        width: 90%;
+        height: 240px;}
+
+.b     {width: 100%;
+       height: 30px;
+       position: relative;
+       bottom: 0;
+       left: 0;
+       display: flex;
+       align-items: center;
+       justify-content: center;}
+
+.a      {display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: 0.4s ease-in-out;
+        width: 30%;
+        background-color: rgb(205, 123, 125);
+        border-radius: 20%;
+        padding: 10px;
+        color: #0b0b0b;
+        box-shadow: inset 0 -5px 0 #85060c;}
+
+.a:hover { box-shadow: inset 0 -60px 0 #a39684, 2px 2px 3px rgba(104, 95, 95, 0.3);
+        color: #DECDA5;}
+  
+    </style> 
+</head>
+<body>
+    <div class="container">
+        <div class=block><h2>Относительные единицы измерения</h2>
+        <div><img class="img" src="https://ylianova.ru/wp-content/uploads/html-rem_0.jpg"></div>
+        <ul><li>% – измерение в процентах</li>
+        <li>em – размер шрифта относительно обычного, т. е., если шрифт имеет размер 2.5em, значит, он в 2,5 раза больше обычного шрифта</li>
+        <li>rem – размер шрифта относительно корневого элемента документа</li>
+        <li>ch – ширина символа «0». В моноширинных шрифтах, где все символы имеют одинаковую ширину, 1ch это ширина одного символа</li>
+        <li>ex – x-высота текущего шрифта, измеряется в высоте символа «х» в нижнем регистре</li>
+    </ul>
+        <div class="b"><a class="a" href="https://techrocks.ru/2019/08/07/units-in-css-for-beginners/">Источник</a></div>
+    </div>
+ <div class="block">
+    <h2>Абсолютные единицы измерения</h2>
+    <div><img class="img" src="https://techrocks.ru/wp-content/uploads/2019/08/measure-2737004_1280-min.jpg"></div>
+    <ul><li>cm – сантиметры. 1 cm = 1 cm</li>
+        <li>mm – миллиметры. 10 mm = 1 cm</li>
+        <li>in – дюймы (inches). 1 in = 96px = 2.54 cm</li>
+        <li>px – пиксели. 1 px = 1/96 от 1 in</li>
+        <li>pt – поинты (points). 1 pt = 1/72 от 1 in</li>
+        <li>pc – пайки (пики, англ. pica). 1pc = 12 pt</li>
+    </ul>
+<div class="b"><a class="a" href="https://techrocks.ru/2019/08/07/units-in-css-for-beginners/">Источник</a></div>
+</div>
+
+    <div class="block">
+        <h2>Единицы измерения области просмотра (viewport-единицы)</h2>
+        <div><img class="img" src="https://webformyself.com/wp-content/uploads/2020/47/1.png"></div>
+    <ul>
+    <li>vw – 1% от ширины области просмотра (50% это половина ширины области просмотра)</li>
+    <Li>vh – 1% от высоты области просмотра (50% это половина высоты области просмотра)</Li>
+    <li>vmin – 1% от меньшего размера ширины или высоты области просмотра (т. е., если ширина меньше высоты, то vmin рассчитывается от ширины, при этом 1 vmin = 1 vw)</li>
+    <li>vmax – 1% от большего размера ширины или высоты области просмотра (т. е., если высота больше ширины, то vmax рассчитывается от высоты, при этом 1 vmax = 1 vh)</li>
+    </ul>
+        <div class="b"><a class="a" href="https://techrocks.ru/2019/08/07/units-in-css-for-beginners/">Источник</a></div>
+    </div>
+   
+</div>
+</body>
+</html>
