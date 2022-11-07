@@ -7,8 +7,9 @@
     <title>Document</title>
     <style> 
 
-
-.block {display: flex;
+.container {display: flex;
+flex-direction: row;}
+.block {display: inline-block;
         width: 30%;
         height: 90vh;
         text-align: center;
@@ -16,22 +17,20 @@
         border-radius: 10%;
         padding: 10px;
         margin: 10px;
-        margin-bottom: 40px;
         border: 2px solid white;
         background-color: rgb(217, 177, 178);
-        display: inline-block;
        }
 ul {text-align: justify;}
-.text {display: flexbox;
-    height: 89%;}
+.text {display: block;
+    height: 90%;}
 .img    {position: relative;
         width: 90%;
         height: 240px;}
-.b     {width: 100%;
+.b     {display: block;
+       width: 100%;
        height: 30px;
        position: relative;
-       bottom: 0;
-       display: flexbox;}
+       bottom: 0;   }
 
 .a      {display: inline-block;
         text-decoration: none;
@@ -48,27 +47,22 @@ ul {text-align: justify;}
         color: #DECDA5;}
 
         @media screen and (max-width: 450px){
-.block {width: auto; 
-    height: auto;
-    flex-wrap: wrap;}} 
+.container {
+    flex-wrap: wrap;}
+.block {width: auto;
+height: auto;}}
 
-        @media screen and (min-width: 451px) and (max-width: 1240px) {
-.block {display:flexbox;
-    font-size: 10px;
-    padding: 5px;
-    margin: 5px;
-    width: 28%;
-height: 100vh;}
-.img {width: 60%;
-height: 100px;}
-        }
+@media screen and (min-width: 451px) and (max-width: 960px) {
+.block {width: 30%;
+height: auto;
+font-size: 90%;} }
 
 
   
     </style> 
 </head>
 <body>
-
+<div class="container">
         <div class=block><div class="text"><h2>Относительные единицы измерения</h2>
         <div><img class="img" src="https://ylianova.ru/wp-content/uploads/html-rem_0.jpg"></div>
         <ul><li>% – измерение в процентах</li>
@@ -103,7 +97,7 @@ height: 100px;}
     </ul></div>
         <div class="b"><a class="a" href="https://techrocks.ru/2019/08/07/units-in-css-for-beginners/">Источник</a></div>
         </div>
-
+</div>
 
 </body>
 </html>
