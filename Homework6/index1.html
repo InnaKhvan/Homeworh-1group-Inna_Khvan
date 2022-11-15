@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <script src="script.js"></script>
+    <style>
+        .container {
+            display: flex;
+            position: relative;
+            justify-content: space-around;
+            width: 50%;
+            height: 70%;
+            border-radius: 100%;
+            background: rgb(193, 166, 166);
+            border: 2px solid black;
+            padding: 30px;
+
+        }
+
+        .eye {
+            display: flex;
+            position: relative;
+            margin: 5px;
+            width: 10px;
+            padding: 50px;
+            background: grey;
+            border: 2px solid black;
+            border-top: 20px solid black;
+            border-radius: 70%;
+            animation: eye 2s ease-in-out infinite;
+        }
+
+        .pupils {
+            padding: 20px;
+            position: relative;
+            background: black;
+            border-radius: 100%;
+            width: 10px;
+        }
+
+        .mouth {
+            display: flex;
+            position: relative;
+        }
+
+        @keyframes eye {
+            90% {
+                transform: none;
+            }
+
+            95% {
+                transform: scaleY(0.1);
+            }
+        }
+
+        @media screen and (max-width: 450px) {
+            .eye {
+                width: 5px;
+
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="eye">
+            <div class="pupils"></div>
+        </div>
+        <div class="eye">
+            <div class="pupils"></div>
+        </div>
+        <div class="mouth"></div>
+    </div>
+</body>
+
+</html>
