@@ -7,7 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
     <script src="script.js"></script>
+
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+
+        h2 {
+            font-family: 'Rubik Bubbles', cursive;
+        }
+
         .container {
             display: flex;
             position: relative;
@@ -18,7 +25,6 @@
             background: rgb(193, 166, 166);
             border: 2px solid black;
             padding: 30px;
-
         }
 
         .eye {
@@ -58,14 +64,12 @@
         }
 
         @media screen and (max-width: 450px) {
-            .eye {
-                width: 5px;
-
-            }
+            .eye {width: 5px;}}
     </style>
 </head>
 
 <body>
+    <h2>Смотри консоль</h2>
     <div class="container">
         <div class="eye">
             <div class="pupils"></div>
