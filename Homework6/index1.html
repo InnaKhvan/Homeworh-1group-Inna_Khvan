@@ -7,23 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JavaScript</title>
     <script src="script.js"></script>
-
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
-
-        .block {
-            display: inline-block;
-            width: 33%;
-            text-align: center;
-            box-shadow: 10px 10px 5px rgb(121, 46, 46);
-            border-radius: 10%;
-            padding: 10px;
-            margin: 10px;
-            border: 2px solid white;
-            background-color: rgb(217, 177, 178);
-            padding-bottom: 50px;
-        }
-
         .container {
             display: flex;
             position: relative;
@@ -34,6 +18,7 @@
             background: rgb(193, 166, 166);
             border: 2px solid black;
             padding: 30px;
+
         }
 
         .eye {
@@ -57,11 +42,9 @@
             width: 10px;
         }
 
-        .button_container {
-            display: block;
-            width: 100%;
+        .mouth {
+            display: flex;
             position: relative;
-            padding-top: 20px;
         }
 
         @keyframes eye {
@@ -75,30 +58,14 @@
         }
 
         @media screen and (max-width: 450px) {
-            .container {
-                flex-wrap: wrap;
-            }
+            .eye {
+                width: 5px;
 
-            .block {
-                width: auto;
             }
-        }
-
-        @media screen and (min-width: 451px) and (max-width: 960px) {
-            .block {
-                width: 30%;
-                font-size: 90%;
-            }
-
-            .button {
-                width: 90%;
-            }
-        }
     </style>
 </head>
 
 <body>
-    <h2>Смотри консоль</h2>
     <div class="container">
         <div class="eye">
             <div class="pupils"></div>
