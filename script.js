@@ -1,50 +1,78 @@
-setTimeout(function () {
-    const buuza = {
-        name: '1',
-        price: 90,
-    };
-    const pizza = {
-        name: '2',
-        price: 150,
-    };
-    const pasta = {
-        name: '3',
-        price: 100,
-    };
-    const cake = {
-        name: '4',
-        price: 120,
-    };
-
-    let order1 = 0;
-    let order2 = 0;
-    let order3 = 0;
-    let order4 = 0;
-
-    let food = [buuza, pizza, pasta, cake];
-
-    let choice = prompt('Введите номер блюда?', '1,2,3,4');
-    if (food[choice - 1]) { order1 = prompt('Количество порций?') }
-    let result = prompt('Что-нибудь еще?', 'Да/Нет')
-    if (result == 'Да' || result == 'да') {
-        choice = prompt('Введите номер блюда?', '1,2,3,4')
-        if (food[choice - 1]) { order2 = prompt('Количество порций?') }
-        let result1 = prompt('Что-нибудь еще?', 'Да/Нет')
-        if (result1 == 'Да' || result1 == 'да') {
-            choice = prompt('Введите номер блюда?', '1,2,3,4')
-            if (food[choice - 1]) { order3 = prompt('Количество порций?') }
-            let result2 = prompt('Что-нибудь еще?', 'Да/Нет')
-            if (result2 == 'Да' || result2 == 'да') {
-                choice = prompt('Введите номер блюда?', '1,2,3,4')
-                if (food[choice - 1]) { order4 = prompt('Количество порций?') }
-            }
-            else if (result2 == 'Нет' || result2 == 'нет') { alert(`Стоимость вашего заказа = ${(order1 * buuza.price) + (order2 * pizza.price) + (order3 * pasta.price) + (order4 * cake.price)}`) }
-            else { alert(`Стоимость вашего заказа = ${(order1 * buuza.price) + (order2 * pizza.price) + (order3 * pasta.price) + (order4 * cake.price)}`) }
-        }
-        else if (result1 == 'Нет' || result1 == 'нет') { alert(`Стоимость вашего заказа = ${(order1 * buuza.price) + (order2 * pizza.price) + (order3 * pasta.price) + (order4 * cake.price)}`) }
-        else { alert(`Стоимость вашего заказа = ${(order1 * buuza.price) + (order2 * pizza.price) + (order3 * pasta.price) + (order4 * cake.price)}`) }
+for (let i = 2; i <= 10; i++) {
+    if (i % 2 == 0) {
+        alert(i);
     }
-    else if (result == 'Нет' || result == 'нет') { alert(`Стоимость вашего заказа = ${(order1 * buuza.price) + (order2 * pizza.price) + (order3 * pasta.price) + (order4 * cake.price)}`) }
-    else { alert(`Стоимость вашего заказа = ${(order1 * buuza.price) + (order2 * pizza.price) + (order3 * pasta.price) + (order4 * cake.price)}`) }
+}
 
-}, 1000)
+for (i = 0; ; i++) {
+    if (i === 5)
+        break; {
+        alert(i);
+    }
+}
+
+let ingPrice = {
+    dough: 10,
+    salami: 20,
+    vegetables: 13,
+    meat: 21,
+    mutton: 18,
+    souce: 30,
+    spaghetti: 26,
+    sugar: 8,
+    fruit: 17,
+}
+let pizza = {
+    name: 'Пицца',
+    ingredients: ['dough', 'salami', 'vegetables'],
+    price: 150,
+};
+
+let buuza = {
+    name: 'Буузы',
+    ingredients: ['dough', 'meat', 'mutton'],
+    price: 90,
+};
+
+let pasta = {
+    name: 'Паста',
+    ingredients: ['souce', 'spaghetti'],
+    priсe: 100,
+};
+
+let cake = {
+    name: 'Торт',
+    ingredients: ['dough', 'sugar', 'fruit'],
+    priсe: 120,
+};
+
+let pizzaSum = 0;
+for (let i = 0; i < pizza.ingredients.length; i++) {
+    let name = pizza.ingredients[i];
+    pizzaSum += ingPrice[name];
+}
+alert(`Себестоимость пиццы = ${pizzaSum}`);
+
+let buuzaSum = 0;
+for (let i = 0; i < buuza.ingredients.length; i++) {
+    let name = buuza.ingredients[i];
+    buuzaSum += ingPrice[name];;
+}
+alert(`Себестоимость бууз = ${buuzaSum}`);
+
+let pastaSum = 0;
+for (let i = 0; i < pasta.ingredients.length; i++) {
+    let name = pasta.ingredients[i];
+    pastaSum += ingPrice[name];;
+}
+alert(`Себестоимость пасты = ${pastaSum}`);
+
+let cakeSum = 0;
+for (let i = 0; i < cake.ingredients.length; i++) {
+    let name = cake.ingredients[i];
+    cakeSum += ingPrice[name];;
+}
+alert(`Себестоимость торта = ${cakeSum}`);
+
+
+alert(`Профит для каждого блюда: пицца - ${pizza.price - pastaSum}, буузы - ${buuza.price - buuzaSum}, паста - ${pasta.priсe - pastaSum}, торт - ${cake.priсe - cakeSum}.`)
