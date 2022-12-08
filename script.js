@@ -25,43 +25,38 @@ let pizza = {
     name: 'Пицца',
     ingredients: ['dough', 'salami', 'vegetables'],
     price: 150,
-    costPrice: 0,
-    profit: 0,
 };
 
 let buuza = {
     name: 'Буузы',
     ingredients: ['dough', 'meat', 'mutton'],
     price: 90,
-    costPrice: 0,
-    profit: 0,
 };
 
 let pasta = {
     name: 'Паста',
     ingredients: ['souce', 'spaghetti'],
     price: 100,
-    costPrice: 0,
-    profit: 0,
 };
 
 let cake = {
     name: 'Торт',
     ingredients: ['dough', 'sugar', 'fruit'],
     price: 120,
-    costPrice: 0,
-    profit: 0,
-
 };
 
 let food = [pizza, buuza, pasta, cake];
-
+let text = "";
 for (let i = 0; i < food.length; i++) {
+    let costPrice = 0;
+    let profit = 0;
     for (let number = 0; number < food[i].ingredients.length; number++) {
         let name = food[i].ingredients[number];
-        food[i].costPrice += ingPrice[name];
+        costPrice += ingPrice[name];
+        console.log(costPrice);
     }
-    food[i].profit = food[i].price - food[i].costPrice;
-    alert('Профит для блюда "' + food[i].name + '" - ' + food[i].profit);
+        profit = '"'+ food[i].name + '" - ' + (food[i].price - costPrice) + '. ';
+       text += profit
 }
 
+alert('Профит для блюда ' + text);
