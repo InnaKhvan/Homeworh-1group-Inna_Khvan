@@ -10,7 +10,6 @@ for (i = 0; ; i++) {
         console.log(i);
     }
 }
-
 let ingPrice = {
     dough: 10,
     salami: 20,
@@ -26,24 +25,18 @@ let pizza = {
     name: 'Пицца',
     ingredients: ['dough', 'salami', 'vegetables'],
     price: 150,
-    costPrice: 0,
-    profit: 0,
 };
 
 let buuza = {
     name: 'Буузы',
     ingredients: ['dough', 'meat', 'mutton'],
     price: 90,
-    costPrice: 0,
-    profit: 0,
 };
 
 let pasta = {
     name: 'Паста',
     ingredients: ['souce', 'spaghetti'],
     price: 100,
-    costPrice: 0,
-    profit: 0,
 };
 
 let cake = {
