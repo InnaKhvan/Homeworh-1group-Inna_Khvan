@@ -6,6 +6,8 @@ function info(a, b) {
 }
 let a = prompt('Введи 1ое число');
 let b = prompt('Введи 2ое число');
+a = Number(a);
+b = Number(b);
 let result = info(a, b);
 alert('Наименьшее число - ' + result);
 
@@ -23,7 +25,7 @@ let ingPrice = {
 let pizza = {
     name: 'Пицца',
     ingredients: ['dough', 'salami', 'vegetables'],
-    price: 150,  
+    price: 150,
 };
 
 let buuza = {
