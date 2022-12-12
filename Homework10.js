@@ -1,12 +1,13 @@
 function info(a, b) {
-    if (a<b){
-    return a;}
-    else {return b};
-  }
-  let a = prompt('Введи 1ое число');
-  let b = prompt('Введи 2ое число');
-  let result = info(a,b);
-  alert('Наименьшее число - ' + result);
+    if (a < b) {
+        return a;
+    }
+    else { return b };
+}
+let a = prompt('Введи 1ое число');
+let b = prompt('Введи 2ое число');
+let result = info(a, b);
+alert('Наименьшее число - ' + result);
 
 let ingPrice = {
     dough: 10,
@@ -22,22 +23,19 @@ let ingPrice = {
 let pizza = {
     name: 'Пицца',
     ingredients: ['dough', 'salami', 'vegetables'],
-    price: 150,
-
+    price: 150,  
 };
 
 let buuza = {
     name: 'Буузы',
     ingredients: ['dough', 'meat', 'mutton'],
     price: 90,
-
 };
 
 let pasta = {
     name: 'Паста',
     ingredients: ['souce', 'spaghetti'],
     price: 100,
-
 };
 
 let cake = {
@@ -55,8 +53,18 @@ function calcFoodProfit(ingredients, ingredientsCost, foodPrice) {
     return foodPrice - costPrice;
 }
 
-let profit = calcFoodProfit(cake.ingredients, ingPrice, cake.price);
+let pizzaProfit = calcFoodProfit(pizza.ingredients, ingPrice, pizza.price);
+pizza.profit = calcFoodProfit(pizza.ingredients, ingPrice, pizza.price);
+alert('Профит пиццы - ' + pizzaProfit);
 
+let buuzaProfit = calcFoodProfit(buuza.ingredients, ingPrice, buuza.price);
+buuza.profit = calcFoodProfit(buuza.ingredients, ingPrice, buuza.price);
+alert('Профит буузы - ' + buuzaProfit);
+
+let pastaProfit = calcFoodProfit(pasta.ingredients, ingPrice, pasta.price);
+pasta.profit = calcFoodProfit(pasta.ingredients, ingPrice, pasta.price);
+alert('Профит пасты - ' + pastaProfit);
+
+let cakeProfit = calcFoodProfit(cake.ingredients, ingPrice, cake.price);
 cake.profit = calcFoodProfit(cake.ingredients, ingPrice, cake.price);
-
-console.log(profit);
+alert('Профит торта - ' + cakeProfit);
