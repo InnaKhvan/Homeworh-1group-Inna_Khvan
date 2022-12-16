@@ -1,47 +1,37 @@
-{
-    "food": [
+    [
         {
-            "pizza": {
-                "name": "Пицца",
-                "ingredients": [
-                    "dough",
-                    "salami",
-                    "vegetables"
-                ],
-                "price": 150
-            }
+            "name": "Пицца",
+            "ingredients": [
+                "dough",
+                "salami",
+                "vegetables"
+            ],
+            "price": 150
         },
         {
-            "buuza": {
-                "name": "Буузы",
-                "ingredients": [
-                    "dough",
-                    "meat",
-                    "mutton"
-                ],
-                "price": 90
-            }
+            "name": "Буузы",
+            "ingredients": [
+                "dough",
+                "meat",
+                "mutton"
+            ],
+            "price": 90
         },
         {
-            "pasta": {
-                "name": "Паста",
-                "ingredients": [
-                    "souce",
-                    "spaghetti"
-                ],
-                "price": 100
-            }
+            "name": "Паста",
+            "ingredients": [
+                "souce",
+                "spaghetti"
+            ],
+            "price": 100
         },
         {
-            "cake": {
-                "name": "Торт",
-                "ingredients": [
-                    "dough",
-                    "sugar",
-                    "fruit"
-                ],
-                "price": 120
-            }
+            "name": "Торт",
+            "ingredients": [
+                "dough",
+                "sugar",
+                "fruit"
+            ],
+            "price": 120
         }
     ]
-}
