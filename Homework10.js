@@ -11,40 +11,12 @@ b = Number(b);
 let result = info(a, b);
 alert('Наименьшее число - ' + result);
 
-let ingPrice = {
-    dough: 10,
-    salami: 20,
-    vegetables: 13,
-    meat: 21,
-    mutton: 18,
-    souce: 30,
-    spaghetti: 26,
-    sugar: 8,
-    fruit: 17,
-}
-let pizza = {
-    name: 'Пицца',
-    ingredients: ['dough', 'salami', 'vegetables'],
-    price: 150,
-};
+import foodObj from "./food.json" assert {type: 'json'};
 
-let buuza = {
-    name: 'Буузы',
-    ingredients: ['dough', 'meat', 'mutton'],
-    price: 90,
-};
+console.log(foodObj.food);
 
-let pasta = {
-    name: 'Паста',
-    ingredients: ['souce', 'spaghetti'],
-    price: 100,
-};
-
-let cake = {
-    name: 'Торт',
-    ingredients: ['dough', 'sugar', 'fruit'],
-    price: 120,
-};
+import ingPrice from "./ingPrice.json" assert {type: 'json'}; 
+console.log(ingPrice);
 
 function calcFoodProfit(ingredients, ingredientsCost, foodPrice) {
     let costPrice = 0;
@@ -55,18 +27,8 @@ function calcFoodProfit(ingredients, ingredientsCost, foodPrice) {
     return foodPrice - costPrice;
 }
 
-let pizzaProfit = calcFoodProfit(pizza.ingredients, ingPrice, pizza.price);
-pizza.profit = calcFoodProfit(pizza.ingredients, ingPrice, pizza.price);
-alert('Профит пиццы - ' + pizzaProfit);
-
-let buuzaProfit = calcFoodProfit(buuza.ingredients, ingPrice, buuza.price);
-buuza.profit = calcFoodProfit(buuza.ingredients, ingPrice, buuza.price);
-alert('Профит буузы - ' + buuzaProfit);
-
-let pastaProfit = calcFoodProfit(pasta.ingredients, ingPrice, pasta.price);
-pasta.profit = calcFoodProfit(pasta.ingredients, ingPrice, pasta.price);
-alert('Профит пасты - ' + pastaProfit);
-
-let cakeProfit = calcFoodProfit(cake.ingredients, ingPrice, cake.price);
-cake.profit = calcFoodProfit(cake.ingredients, ingPrice, cake.price);
-alert('Профит торта - ' + cakeProfit);
+let text = "";
+for (let i = 0; i < foodObj.food.length; i++) {
+    let profit = '"'+ foodObj.food[i].name + '" - ' + (calcFoodProfit(foodObj.food[i].ingredients, ingPrice, foodObj.food[i].price)) + '. ';
+text += profit;}
+alert('Профит для блюда ' + text)
