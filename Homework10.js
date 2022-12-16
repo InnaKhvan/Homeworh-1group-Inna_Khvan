@@ -12,11 +12,7 @@ let result = info(a, b);
 alert('Наименьшее число - ' + result);
 
 import foodObj from "./food.json" assert {type: 'json'};
-
-console.log(foodObj.food);
-
 import ingPrice from "./ingPrice.json" assert {type: 'json'}; 
-console.log(ingPrice);
 
 function calcFoodProfit(ingredients, ingredientsCost, foodPrice) {
     let costPrice = 0;
